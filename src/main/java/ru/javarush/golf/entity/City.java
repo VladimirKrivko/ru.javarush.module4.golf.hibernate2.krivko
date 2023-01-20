@@ -6,19 +6,23 @@ import org.hibernate.annotations.UpdateTimestamp;
 import java.time.LocalDateTime;
 
 @Entity
-@Table(schema = "movie", name = "country")
-public class Country {
+@Table(schema = "movie", name = "city")
+public class City {
 
     @Id
-    @Column(name = "country_id")
+    @Column(name = "city_id")
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Short id;
 
-    @Column(name = "country", length = 50, nullable = false)
+    @Column(name = "city", length = 50, nullable = false)
     private String name;
 
+    @ManyToOne
+    @JoinColumn(name = "country_id")
+    private Country country;
+
+    @Column(name = "last_update", nullable = false)
     @UpdateTimestamp
-    @Column(name = "last_update")
     private LocalDateTime lastUpdate;
 
     public Short getId() {
@@ -35,6 +39,14 @@ public class Country {
 
     public void setName(String name) {
         this.name = name;
+    }
+
+    public Country getCountry() {
+        return country;
+    }
+
+    public void setCountry(Country country) {
+        this.country = country;
     }
 
     public LocalDateTime getLastUpdate() {
