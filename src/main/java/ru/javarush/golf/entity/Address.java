@@ -17,7 +17,7 @@ public class Address {
     @Column(name = "address", length = 50, nullable = false)
     private String address;
 
-    @Column(name = "address2", length = 50, nullable = false)
+    @Column(name = "address2", length = 50)
     private String address2;
 
     @Column(name = "district", length = 20, nullable = false)

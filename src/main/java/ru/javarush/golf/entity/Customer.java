@@ -28,7 +28,7 @@ public class Customer {
     private String email;
 
     @OneToOne
-    @Column(name = "address_id")
+    @JoinColumn(name = "address_id")
     private Address address;
 
     @Column(name = "active", columnDefinition = "BIT", nullable = false)

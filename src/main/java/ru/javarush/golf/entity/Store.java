@@ -19,7 +19,7 @@ public class Store {
     private Staff staff;
 
     @OneToOne
-    @Column(name = "address_id")
+    @JoinColumn(name = "address_id")
     private Address address;
 
     @Column(name = "last_update", nullable = false)

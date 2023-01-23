@@ -27,6 +27,7 @@ public class Film {
 
     @Column(name = "release_year", columnDefinition = "year")
     //TODO: конвертер
+    @Convert(converter = YearAttributeConverter.class)
     private Year releaseYear;
 
     @ManyToOne
@@ -51,6 +52,7 @@ public class Film {
 
     //@Enumerated ??
     @Column(name = "rating", columnDefinition = "enum('G', 'PG', 'PG-13', 'R', 'NC-17')")
+    @Convert(converter = RatingConverter.class)
     private Rating rating;
 
     @Column(name = "special_features", columnDefinition = "set('Trailers', 'Commentaries', 'Deleted Scenes', 'Behind the Scenes')")

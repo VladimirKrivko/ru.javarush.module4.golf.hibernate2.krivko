@@ -9,6 +9,5 @@
         <property name="hibernate.show_sql">true</property>
         <property name="hibernate.current_session_context_class">thread</property>
         <property name="hibernate.hbm2ddl.auto">validate</property>
-        <mapping package="ru/javarush/golf/entity"/>
     </session-factory>
 </hibernate-configuration>
