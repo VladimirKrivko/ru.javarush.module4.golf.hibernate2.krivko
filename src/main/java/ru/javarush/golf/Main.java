@@ -12,7 +12,6 @@ import java.time.LocalDateTime;
 import java.time.Year;
 import java.util.HashSet;
 import java.util.List;
-import java.util.Set;
 
 public class Main {
 
@@ -70,9 +69,9 @@ public class Main {
 
     public static void main(String[] args) {
         Main main = new Main();
-//        Customer customer = main.createCustomer();
-//        main.customerReturnInventoryToStore();
-//        main.customerRentInventory(customer);
+        Customer customer = main.createCustomer();
+        main.customerReturnInventoryToStore();
+        main.customerRentInventory(customer);
         main.newFilmWasMade();
     }
 
